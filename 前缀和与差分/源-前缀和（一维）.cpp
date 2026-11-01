@@ -8,8 +8,8 @@ int get_sum(int* sum, int l, int r) {
 	}
 }
 int main() {
-	int arr[5] = { 1,3,7,5,2 };//求下标【l,r】元素的和。
-	int sum[5];//前缀和数组
+	int arr[5] = { 1,3,7,5,2 };求下标【l,r】元素的和。
+	int sum[5];前缀和数组
 	for (int i = 0; i < 5; i++) {
 		if (i == 0)
 			sum[i] = arr[0];

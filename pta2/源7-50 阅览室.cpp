@@ -5,12 +5,12 @@ const int N = 1e5;
 struct node {
 	int h;
 	int m;
-	int v;//标记书是否被借，否为0；
+	int v;标记书是否被借，否为0；
 	node() {
 		h = 0;
 		m = 0;
 		v = 0;
-	}//结构体重构（初始化结构体）
+	}结构体重构（初始化结构体）
 }s[1005];
 int main() {
 	int n;
@@ -19,7 +19,7 @@ int main() {
 	int g;
 	char c;
 	int hh, mm;
-	int cnt = 0 , sum = 0;//有效借书次数 有效借书时间
+	int cnt = 0 , sum = 0;有效借书次数 有效借书时间
 	while (scanf("%d %c %d:%d", &g, &c, &hh, &mm)) {
 		if (g == 0) {
 			if (cnt != 0) {
@@ -29,7 +29,7 @@ int main() {
 				cout << 0 << " " << 0 << endl;
 			}
 			if (fl == n)break;
-			//cout << fl << endl;
+			cout << fl << endl;
 			cnt = 0, sum = 0;
 			fl++;
 			
@@ -41,7 +41,7 @@ int main() {
 			s[g].m = mm;
 			s[g].v = fl + 1;
 		}
-		else {//c=='E'
+		else {c=='E'
 			if (s[g].v != fl + 1) {
 				continue;
 			}
@@ -52,6 +52,6 @@ int main() {
 		
 	}
 	
-	//cout<<round((1.0*sum / cnt));
+	cout<<round((1.0*sum / cnt));
 	return 0;
 }

@@ -1,7 +1,7 @@
-//#include<bits/stdc++.h>
-//using namespace std;
-//int main() {
-//	cout << 0x3f3f3f3f;
-//
-//	return 0;
-//}
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+	cout << 0x3f3f3f3f;
+
+	return 0;
+}

@@ -7,7 +7,7 @@ typedef struct {
 	ElemType data[MaxSize];
 	int top;
 } SqStack;
-void InitStack(SqStack& st)		//st为引用型参数
+void InitStack(SqStack& st)		st为引用型参数
 {
 	st.top = -1;
 }
@@ -17,7 +17,7 @@ void DestroyStack(SqStack &st)
 
 int Push(SqStack& st, ElemType x)
 {
-	if (st.top == MaxSize - 1)	//栈满
+	if (st.top == MaxSize - 1)	栈满
 		return 0;
 	else
 	{
@@ -27,9 +27,9 @@ int Push(SqStack& st, ElemType x)
 	}
 }
 
-int Pop(SqStack& st, ElemType& x)	//x为引用型参数
+int Pop(SqStack& st, ElemType& x)	x为引用型参数
 {
-	if (st.top == -1)					//栈空
+	if (st.top == -1)					栈空
 		return 0;
 	else
 	{
@@ -39,9 +39,9 @@ int Pop(SqStack& st, ElemType& x)	//x为引用型参数
 	}
 }
 
-int GetTop(SqStack& st, ElemType& x)	//x为引用型参数
+int GetTop(SqStack& st, ElemType& x)	x为引用型参数
 {
-	if (st.top == -1)					//栈空
+	if (st.top == -1)					栈空
 		return 0;
 	else
 	{
@@ -57,13 +57,13 @@ int StackEmpty(SqStack st)
 	if (st.top == -1) return 1;
 	else return 0;
 }
-int Match(char exp[], int n)				//exp存放表达式
+int Match(char exp[], int n)				exp存放表达式
 {
-	SqStack st;							//定义一个顺序栈st
-	InitStack(st);						//栈初始化
+	SqStack st;							定义一个顺序栈st
+	InitStack(st);						栈初始化
 	int flag = 1, i = 0;
 	char ch;
-	while (i < n && flag == 1)				//遍历表达式exp
+	while (i < n && flag == 1)				遍历表达式exp
 	{
 		switch (exp[i])
 		{
@@ -90,15 +90,15 @@ int Match(char exp[], int n)				//exp存放表达式
 		}
 		i++;
 	}
-	if (StackEmpty(st) && flag == 1)		//栈空且符号匹配则返回1
+	if (StackEmpty(st) && flag == 1)		栈空且符号匹配则返回1
 	{
-		DestroyStack(st);				//销毁栈st
+		DestroyStack(st);				销毁栈st
 		return 1;
 	}
 	else
 	{
-		DestroyStack(st);				//销毁栈st
-		return 0;						//否则返回0
+		DestroyStack(st);				销毁栈st
+		return 0;						否则返回0
 	}
 }
 void display(char exp[])

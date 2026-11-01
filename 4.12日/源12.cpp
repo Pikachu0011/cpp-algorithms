@@ -8,10 +8,10 @@ int n;
 LL sum = 0;
 bool vt2[25];
 vector<LL> pf;
-//int cnt = pf.size() / 2;
+int cnt = pf.size() / 2;
 
 
-void dfs(int now) {//位数
+void dfs(int now) {位数
 	if (now >= n + 1) {
 		LL sum = 0;
 		int temp = 0;
@@ -54,9 +54,9 @@ int main() {
 		cin >> arr[i];
 	}
 	dfs(1);
-	//LL sum = 0;
+	LL sum = 0;
 	for (int i = 1; i <= pf.size(); i++) {
-		//cout << pf[i] << endl;
+		cout << pf[i] << endl;
 		sum += pf[i];
 	}
 	sum /= 2;

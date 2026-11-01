@@ -10,8 +10,8 @@ int main() {
 		y = b;
 		b = x % y;
 	}
-	//此时，y为m和n的最大公约数
-	//p=m*n/y;p为m和n的最小公倍数
+	此时，y为m和n的最大公约数
+	p=m*n/y;p为m和n的最小公倍数
 	int p = m * n / y;
 	cout << y << " " << p << endl;
 

@@ -1,13 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 int bin[1000];
-int findx(int x) {//查询
+int findx(int x) {查询
 	int r = x;
 	while (bin[r] != r)
 		r = bin[r];
 	return r;
 }
-void merge(int x, int y) {//合并
+void merge(int x, int y) {合并
 	int fx = findx(x);
 	int fy = findx(y);
 	if (fx != fy)
